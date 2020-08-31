@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP2-3</title>
+</head>
+
+<body>
+    <form>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom01">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Marcos" required>
+                <div class="invalid-feedback">
+                  Corrija Nombre
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom02">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Rossi" required>
+                <div class="invalid-feedback">
+                  Corrija Apellido
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom03">E-mail</label>
+                <input type="email" class="form-control" id="validationCustom03" placeholder="Julianus@E-mail.com" required>
+                <div class="invalid-feedback">
+                  Corrija E-mail
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">Ciudad</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Basavilbaso" required>
+                <div class="invalid-feedback">
+                  Corrija Ciudad.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Direccion</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="Corrientes 223" required>
+                <div class="invalid-feedback">
+                  Corrija direccion.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom06">Telefono</label>
+                <input type="text" class="form-control" id="validationCustom06" placeholder="03445 857952" required>
+                <div class="invalid-feedback">
+                  Corrija Telefono.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Acepto terminos y condiciones
+                </label>
+                <div class="invalid-feedback">
+                  Debe aceptar los terminos y condiciones antes de enviar.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <a href="about:blank" id="cancel" name="cancel" class="btn btn-secondary">Cancel</a>
+          </form>
+          
+          <script>
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+    </form>
+    <script languaje="javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

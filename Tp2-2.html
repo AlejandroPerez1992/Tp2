@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body id="app">
+    <script languaje="javascript">
+        async function obtenerData() {
+            let apiKey = "17c2f66be03ca2fb71ae532985bfea2b";
+            let response = await fetch(
+                `http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${apiKey}&format=json`
+            );
+        let data = await response.json();
+        for (var i = 0; i < 10; i++) {
+            console.log(" El artista numero " + [i] + " es: " + data.artists.artist[i].name
+            + " el playcount es de: " + data.artists.artist[i].playcount
+            + " los oyentes son: " + data.artists.artist[i].listeners);
+        };
+        return data;
+        }
+
+        console.log(obtenerData());
+    </script>
+</body>
+
+</html>
